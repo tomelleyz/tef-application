@@ -1,0 +1,35 @@
+.main-container {
+    background-color: #26292d;
+    min-height: 100vh;
+}
+.welcome-text-container {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
+     url('../images/world-map.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 3rem .5rem 6.5rem;
+}
+.language-cards-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: -125px;
+}
+.language-card {
+    border-radius: .5rem;
+    filter: grayscale(100%);
+    transition: all .2s ease-in-out;
+}
+.language-card:hover, .language-card:focus,
+.language-card:active {
+    box-shadow: 0 .75rem .75rem .15rem rgba(0, 0, 0, 0.085);
+    filter: none;
+}
+.card-img {
+    width: 50px;
+    height: 50px;
+}
+.link:hover {
+    text-decoration: none;
+}

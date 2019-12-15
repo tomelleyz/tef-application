@@ -1,0 +1,29 @@
+.background-body {
+    background-color: #f6f8fc;
+    min-height: 100vh;
+}
+.top-container {
+    background-image: url(../images/widgets.svg), 
+      linear-gradient(to right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75));
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 8rem;
+    padding: 2.5rem 0 13rem;
+}
+.bottom-container {
+    background-color: #32354b;
+    padding: 3rem 1rem 2rem;
+}
+.bottom-container p {
+    font-size: larger;
+}
+
+/* Media Queries */
+@media (max-width: 575.98px) {
+    .bottom-container {
+        padding: 3rem 0 2rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}

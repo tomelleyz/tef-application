@@ -1,25 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ChooseLanguage from './pages/js/choose-language';
+import GetStarted from './pages/js/get-started';
+import ApplicationProcess from './pages/js/application-process';
+import HelpfulWidgets from './pages/js/helpful-widgets';
+import TEFEntrepreneurshipApplication1 from './pages/js/tef-entrepreneurship-application';
+import Error from './pages/js/Error';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <Switch>
+        <Route path="/" exact component={ChooseLanguage} />
+        <Route path="/get-started" component={GetStarted} />
+        <Route path="/application-process" component={ApplicationProcess} />
+        <Route path="/helpful-widgets" component={HelpfulWidgets} />
+        <Route path="/tef-entrepreneurship-application" component={TEFEntrepreneurshipApplication1} />
+        <Route component={Error} />
+      </Switch>
+    </main>
   );
 }
 
