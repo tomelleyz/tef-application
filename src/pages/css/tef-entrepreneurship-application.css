@@ -1,0 +1,26 @@
+ul {
+    padding-inline-start: 20px;
+}
+.main-page-title {
+    padding-right: 20rem;
+}
+.decorative-line-above-form div {
+    height: 4px;
+}
+.decorative-line-above-form div:not(:first-of-type) {
+    background-color: #f3f3f3;
+}
+.application-tips {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.975), rgba(255, 255, 255, 0.975)),
+     url('../images/world-map.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Media Queries */ 
+@media (max-width: 991.98px) {
+    .main-page-title {
+        padding-right: 15px;
+    }
+}

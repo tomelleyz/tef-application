@@ -7,6 +7,7 @@ import GetStarted from './pages/js/get-started';
 import ApplicationProcess from './pages/js/application-process';
 import HelpfulWidgets from './pages/js/helpful-widgets';
 import TEFEntrepreneurshipApplication1 from './pages/js/tef-entrepreneurship-application';
+import TEFEntrepreneurshipApplication2 from './pages/js/tef-entrepreneurship-application-2';
 import Error from './pages/js/Error';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/application-process" component={ApplicationProcess} />
         <Route path="/helpful-widgets" component={HelpfulWidgets} />
         <Route path="/tef-entrepreneurship-application" component={TEFEntrepreneurshipApplication1} />
+        <Route path="/tef-entrepreneurship-application-2" component={TEFEntrepreneurshipApplication2} />
         <Route component={Error} />
       </Switch>
     </main>
