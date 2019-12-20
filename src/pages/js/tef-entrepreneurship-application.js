@@ -12,13 +12,17 @@ import Form from 'react-bootstrap/Form';
 import Badge from 'react-bootstrap/Badge';
 import EventOutlinedIcon from '@material-ui/icons/EventOutlined';
 import InputGroup from 'react-bootstrap/InputGroup';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
+import ToggleButton from 'react-bootstrap/ToggleButton';
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import PersonRoundedIcon from '@material-ui/icons/PersonRounded';
 import PersonOutlineRoundedIcon from '@material-ui/icons/PersonOutlineRounded';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import SaveIcon from '@material-ui/icons/Save';
 import FormatAlignLeftRoundedIcon from '@material-ui/icons/FormatAlignLeftRounded';
 import FormatIndentIncreaseRoundedIcon from '@material-ui/icons/FormatIndentIncreaseRounded';
+import CancelIcon from '@material-ui/icons/Cancel';
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 
 //
 // Dismissible alert for widget
@@ -28,8 +32,8 @@ function AlertDismissible() {
 
   return (
     <>
-      <Alert show={show} className="application-tips mb-5">
-        <Alert.Heading>How's it going?!</Alert.Heading>
+      <Alert show={show} className="application-tips mb-5 p-4">
+        <Alert.Heading className="h6"><span role="img" aria-label="star">&#11088;</span> Application Tips</Alert.Heading>
         <p style={{ fontSize: '.85rem'}}>
           If you have any difficulty with any of the section
           of the application form, you can click 
@@ -38,8 +42,8 @@ function AlertDismissible() {
         </p>
 
         <div className="d-flex justify-content-start">
-          <Button onClick={() => setShow(false)} variant="outline-secondary">
-            Got it!
+          <Button onClick={() => setShow(false)} variant="outline-secondary" size="sm" className="rounded-pill">
+            <CancelIcon fontSize="small" className="align-top" /> Got it!
           </Button>
         </div>
       </Alert>
@@ -114,7 +118,7 @@ export function TEFEntrepreneurshipApplication(props) {
       </Col>
       
 
-      <Col lg={10} className="py-lg-5 pl-lg-5" style={{ backgroundColor: '#f6f8fc'}}>
+      <Col lg={10} className="py-lg-5 pl-lg-5 main-content-part">
         <Container>
 
           <Dropdown className="container">
@@ -151,8 +155,8 @@ export function TEFEntrepreneurshipApplication(props) {
             </Col>
             <Col lg={4}>
               <AlertDismissible />
-              <Card className="w-50 h6">
-                <Card.Body className="p-3">Need Help?</Card.Body>
+              <Card className="w-75 h6">
+                <Card.Body className="py-3 px-4"><HelpOutlineIcon className="help-icon mr-2 rounded-circle text-success" /> Need Help?</Card.Body>
               </Card>
             </Col>
           </Row>
@@ -172,7 +176,7 @@ function YourBioForm() {
       <span className="h5 w-100">Personal  
         <span className="font-weight-light"> Information </span>
       </span>
-      <Badge variant="success">1 of 3</Badge>
+      <Badge className="text-success green-badge">1 of 3</Badge>
       <p className="mb-5">Let's start with the basics.</p>
 
       <Row className="mb-4">
@@ -189,11 +193,14 @@ function YourBioForm() {
       <Row className="mb-4">
         <Col md={6} controlId="gender">
           <Form.Label>Gender</Form.Label> <br/>
-          <ButtonGroup className="w-100">
-          <Button variant="danger">Male <PersonRoundedIcon className="align-top" /></Button>
-          <Button variant="outline-secondary">Female <PersonOutlineRoundedIcon className="align-top" /></Button>
-          <Button variant="outline-secondary">Others</Button>
-          </ButtonGroup>
+          <ButtonToolbar>
+            <ToggleButtonGroup type="radio" name="options" defaultValue={1}>
+              <ToggleButton value={1} variant="outline-danger">Male <PersonRoundedIcon className="align-top" /></ToggleButton>
+              <ToggleButton value={2} variant="outline-danger">Female <PersonOutlineRoundedIcon className="align-top" /></ToggleButton>
+              <ToggleButton value={3} variant="outline-danger">Others</ToggleButton>
+            </ToggleButtonGroup>
+          </ButtonToolbar>
+          
         </Col>
         <Col md={6} controlId="birthday">
           <Form.Label>Birthday</Form.Label>
@@ -203,9 +210,10 @@ function YourBioForm() {
               placeholder="DD-MM-YYYY"
               aria-label="Applicant's Birthday"
               aria-describedby="basic-addon2"
+              className="border-right-0"
             />
             <InputGroup.Append>
-            <InputGroup.Text id="basic-addon2"><EventOutlinedIcon color="action" /></InputGroup.Text>
+            <InputGroup.Text id="basic-addon2" className="bg-white border-left-0"><EventOutlinedIcon color="action" /></InputGroup.Text>
             </InputGroup.Append>
           </InputGroup>
         </Col>
@@ -233,7 +241,7 @@ function YourBioForm() {
           <Form.Label>Phone number</Form.Label>
           <InputGroup>
             <InputGroup.Prepend>
-              <InputGroup.Text id="basic-addon1">+234</InputGroup.Text>
+              <InputGroup.Text id="basic-addon1" className="bg-white">+234</InputGroup.Text>
             </InputGroup.Prepend>
             <Form.Control
               type="tel"
@@ -262,7 +270,7 @@ function YourBioForm() {
       <span className="h5 w-100">Next  
         <span className="font-weight-light"> of Kin </span>
       </span>
-      <Badge variant="success">1 of 3</Badge>
+      <Badge className="text-success green-badge">1 of 3</Badge>
       <p className="mb-5">
         It's important to have an alternative contact 
         detail in case you're unreachable.
@@ -287,7 +295,7 @@ function YourBioForm() {
           <Form.Label>Phone number</Form.Label>
           <InputGroup>
             <InputGroup.Prepend>
-              <InputGroup.Text id="basic-addon1">+234</InputGroup.Text>
+              <InputGroup.Text id="basic-addon1" className="bg-white">+234</InputGroup.Text>
             </InputGroup.Prepend>
             <Form.Control
               type="tel"

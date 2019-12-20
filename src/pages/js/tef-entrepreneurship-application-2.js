@@ -19,7 +19,7 @@ function IdeaAndExperience() {
       <p className="mb-4">Let's start with the basics.</p>
 
       <Form.Group className="mb-4">
-        <Badge variant="danger">1 of 3</Badge> <br/>
+        <Badge className="text-danger red-badge">1 of 3</Badge> <br/>
         <Form.Label>First off, tell us about your business idea</Form.Label>
         <Form.Control 
           as="textarea" 
@@ -31,7 +31,7 @@ function IdeaAndExperience() {
 
       <Form.Row className="mb-4">
         <Col lg={9}>
-          <Badge variant="danger">2 of 6</Badge> <br />
+          <Badge className="text-danger red-badge">2 of 6</Badge> <br />
           <Form.Label>What is your highest level of education?</Form.Label>
           <Form.Control as="select"> 
             <option>E.g. University degree</option>
@@ -45,7 +45,7 @@ function IdeaAndExperience() {
 
       <Form.Row className="mb-4">
         <Col lg={9}>
-          <Badge variant="danger">3 of 6</Badge> <br />
+          <Badge className="text-danger red-badge">3 of 6</Badge> <br />
           <Form.Label>How many years of work experience do you have?</Form.Label>
           <Form.Control as="select"> 
             <option>E.g. 0 to 2 years</option>
@@ -59,7 +59,7 @@ function IdeaAndExperience() {
 
       <Form.Row className="mb-4">
         <Col lg={9}>
-          <Badge variant="danger">4 of 6</Badge> <br />
+          <Badge className="text-danger red-badge">4 of 6</Badge> <br />
           <Form.Label>Is your idea in your field of experience?</Form.Label> <br />
           <ButtonGroup>
             <Button variant="outline-secondary">Yes</Button>
@@ -70,7 +70,7 @@ function IdeaAndExperience() {
 
       <Form.Row className="mb-4">
         <Col lg={9}>
-          <Badge variant="danger">5 of 6</Badge> <br />
+          <Badge className="text-danger red-badge">5 of 6</Badge> <br />
           <Form.Label>How many hours are you working on your idea per week?</Form.Label>
           <Form.Control as="select"> 
             <option>E.g. Part time, Full time</option>
@@ -82,7 +82,7 @@ function IdeaAndExperience() {
 
       <Form.Row className="mb-5">
         <Col lg={9}>
-          <Badge variant="danger">6 of 6</Badge> <br />
+          <Badge className="text-danger red-badge">6 of 6</Badge> <br />
           <Form.Label>Are you currently making money from your idea?</Form.Label> <br />
           <ButtonGroup>
             <Button variant="outline-secondary">Yes</Button>

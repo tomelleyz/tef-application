@@ -1,3 +1,10 @@
+.main-content-part {
+    background: url('../images/woman_on_laptop.svg'), 
+      linear-gradient(to right, #f6f8fc, #f6f8fc);
+    background-repeat: no-repeat, repeat;
+    background-size: 40% 45%;
+    background-position: right bottom, center;
+}
 ul {
     padding-inline-start: 20px;
 }
@@ -9,6 +16,12 @@ ul {
 }
 .decorative-line-above-form div:not(:first-of-type) {
     background-color: #f3f3f3;
+}
+.green-badge, .help-icon {
+    background-color: rgba(40, 167, 69, 0.3);
+}
+.red-badge {
+    background-color: rgba(220, 53, 69, 0.3);
 }
 .application-tips {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.975), rgba(255, 255, 255, 0.975)),
